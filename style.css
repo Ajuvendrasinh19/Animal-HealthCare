@@ -1,0 +1,251 @@
+*{
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(3,8,25,0.6),rgba(3,8,25,0.6)),url("images/car1.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: inline-block;
+    display: flex;
+    flex-direction: row;
+}
+nav img{
+    margin-top: 5px;
+    margin-left:5px;
+    height: 120px;
+    width:120px;
+    padding-left:5;
+    padding-top:5;
+    border-radius:10px;
+}
+.Info{
+    flex: 10;
+    text-align: right;
+}
+.Info ul li{
+    display: inline-block;
+    padding: 8px;
+    margin-top: 0px;
+    position: relative;
+}
+.Info ul li{
+    color: #fff;
+    font-size: 13px;
+}
+.Info ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.Info ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top:50% ;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 60px;
+}
+.hero-btn{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid#fff;
+    padding: 12px 34px;
+    margin-top: 10px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    
+}
+.hero-btn:hover{
+    border:1px solid #fbf9f9;
+    background: #f52d1f;
+    transition: 0.5s;
+}
+nav .fa{
+    display:none;
+}
+nav .fa-solid{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .Info ul li{
+        display: block;
+    }
+
+.Info  {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    height: 100vh;
+    width: 100px;
+    top: 0;
+    right: -300px;
+    text-align: left;
+    z-index: 999;
+    transition: 1s;
+     }
+
+
+nav .fa{
+    display:block;
+    color: #fff;
+    margin: 10px;
+}
+nav .fa-solid{
+    display: block;
+}
+
+
+.Info{
+    padding: 30px;
+}
+}   
+
+/*----ABOUT----*/
+.about{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+h1{
+    font-size: 30px;
+    font-weight: 50000;
+}
+p{
+    font-size: 14px;
+   color: #f44336; 
+    line-height: 22px;
+    font-weight: 200;
+}
+.row1{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.About-col{
+    margin-top: 5%;
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 50px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    font-size: 15px;
+    font-weight: 5000;
+    text-align: center;
+    margin: 2% 2%;
+}
+
+.About-col:hover{
+    box-shadow: 0 0 20px 0px rgba(20, 20, 20, 0.3);
+}
+@media(max-width:700px){
+    .row1{
+        flex-direction: column;
+    }
+    
+}
+    /*service*/
+
+ .service{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+ }   
+ h1{
+    font-size: 30px;
+    font-weight: 50000;
+}
+p{
+    font-size: 14px;
+   color: #f44336; 
+    line-height: 22px;
+    font-weight: 200;
+}
+.row2{
+    margin-top: 5%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); 
+   
+    justify-content:space-between;
+}
+.service-col{
+   
+    margin-top: 5%;
+    flex-basis: 3%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    font-size: 15px;
+    font-weight: 5000;
+    text-align: center;
+    margin: 2% 2%;
+}
+
+.service-col:hover{
+    box-shadow: 0 0 20px 0px rgba(20, 20, 20, 0.3);
+}
+@media(max-width:700px){
+    .row2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.img{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position:absolute;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    left: 100px;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+    top: 0%;
+    left: 0;
+    
+
+}
+.layer:hover{
+    background: rgba(226 0 0 0.7);
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Organisation Helpline</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Scroll Reveal Styles */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+
+        
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <div class="Info" id="Info">
+            <i class="fa fa-times" onclick="hidemenu()"></i>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>SERVICE</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showmenu()" style="color: white; top: 10px; right: 10px; font-size: 20px; position: absolute;"></i>
+    </nav>
+    <div class="text-box">
+        <h1>Animal Organisation Helpline</h1>
+        <button class="hero-btn">Visit us to know more</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+    <h1 class="hidden"> ABOUT </h1>
+    <p class="hidden"> Welcome to [Organization Name], a dedicated animal helpline committed to safeguarding the welfare of animals in our communities. Founded with a passion for protecting and improving the lives of animals, we work tirelessly to provide timely assistance and compassionate support to animals in need.</p>
+    <div class="row1">
+        <div class="About-col hidden">
+            <h3>Our Mission</h3>
+            <p>Our mission is to create a world where every animal receives the care, respect, and compassion they deserve. We believe every animal has a right to a safe, loving, and healthy life, and our team is here to make that vision a reality. From emergency rescues to ongoing rehabilitation, our services are designed to offer immediate and impactful care to animals in distress.</p>
+        </div>
+        <div class="About-col hidden">
+            <h3>Our Team</h3>
+            <p>Our team comprises dedicated animal rescuers, veterinarians, volunteers, and advocates who work together to bring about positive change for animals in need. With each call we receive, our compassionate team responds with the expertise and care necessary to make a difference.</p>
+        </div>
+        <div class="About-col hidden">
+            <h3>How You Can Help</h3>
+            <p>You can support our mission in various ways:
+                Volunteer: Join our network of animal advocates to directly support rescues, care, and rehabilitation.
+                Donate: Contributions go directly toward providing medical care, shelter, and sustenance for rescued animals.
+                Adopt: By giving a rescued animal a loving home, you’re giving them a second chance at a happy life.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Section -->
+<section class="service">
+    <h1 class="hidden"> Our Services </h1>
+    <p class="hidden"> At [Organization Name], we are dedicated to supporting animals in need and providing resources for their care and well-being. Our helpline services are designed to offer immediate assistance, guidance, and support for a wide range of animal-related issues. Whether you're dealing with a distressed pet, a wildlife emergency, or seeking advice on animal care, we are here to help.</p>
+    <div class="row2">
+        <div class="service-col hidden">
+            <h3>Emergency Animal Rescue</h3>
+            <p>We provide immediate assistance for animals in distress, including those injured, trapped, or in life-threatening situations. Our network of experienced rescuers is ready to respond quickly to emergencies in your area, ensuring that animals receive the care they need when they need it most.</p>
+        </div>
+        <div class="service-col hidden">
+            <h3>Animal Health & Veterinary Referrals</h3>
+            <p>Our team offers guidance on animal health concerns, including symptoms of illness, injuries, and other medical issues. We connect pet owners with trusted veterinarians and clinics, and offer advice on finding affordable veterinary care, especially in urgent situations.</p>
+        </div>
+        <div class="service-col hidden">
+            <h3>Community Education & Resources</h3>
+            <p>We believe in empowering the community with knowledge about responsible pet ownership, animal welfare, and wildlife conservation. Our educational programs and resources are designed to inform and inspire individuals to take action for animals in their care and the environment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+    <h1 class="hidden"> Contact Us </h1>
+    <p class="hidden"> If you have any questions, concerns, or need assistance, please don't hesitate to reach out to us. Our dedicated team is here to help you and your furry friends. You can contact us via phone, email, or through our social media channels. Together, we can make a difference in the lives of animals in need.</p>
+    <form class="hidden">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<script>
+// Scroll Reveal Functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.hidden');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+</script>
+</body>
+</html>
